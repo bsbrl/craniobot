@@ -73,23 +73,27 @@ To run all of the commands we will use the command line. Prepare the mouse
 		```
 
 	7.	Ensure the tinyG is not in an error/sleep state. Since this is the start of the procedure, reinitialize everything via switching power off and then on. 
-	8.	In the command prompt type 
 	
+	8.	In the command prompt type 
 		```
 		python tinyG_startup.py
 		```
 	it should connect to COM port 4
+	
 	9.	In the case that it was not reinitialized, type
 		```
 		tinyG.wakeUp()
 		```
 	 to wake it up, or a jog command input twice will wake it up, then jog in the desired step/rate.
+	 
 	10.	Jog the end mill up (and away in xy directions if needed) to situate the mouse in the stereotax:
 		```
 		tinyG.jog(“z”,1,200) 
 		```
 		input multiple times can accomplish this.
+		
 	11.	Remove the skin, fat, and fascia covering the dorsal skull.
+	
 	12.	Move the probe away from the mouse using jog commands, usually 15mm right and 15mm down 
 		```
 		tinyG.jog(“x”,15,200)
