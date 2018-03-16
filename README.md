@@ -1,6 +1,6 @@
-# craniobot
+# Craniobot
 
-# System requirements
+## System requirements
 
 1. Software dependencies
 	- Windows 10
@@ -14,7 +14,7 @@
 		- Connect Tiny G according to - https://github.com/synthetos/TinyG/wiki/Connecting-TinyG
 		- For custom notes on our installation see "Tiny G Seup.docx"
 
-# Installation
+## Installation
 
 1. Download software (~10-15 minutes)
 	1. Download zip folder from ".zip" or download repository from https://github.com/bsbrl/craniobot
@@ -62,7 +62,7 @@ See https://www.arduino.cc/en/Guide/ArduinoDue to familiarize youself with the a
 	6. Save the file and close the editor. 
 
 
-# Demo
+## Demo
 1. Instructions to run on data
 To run all of the commands we will use the command line. Prepare the mouse
 	1.	To run all of the commands we will use the command line. Search for command prompt in the windows search bar, and right click run as administrator. 
@@ -73,7 +73,11 @@ Cd C:\downloads\craniobot\python code
 ```
 
 	7.	Ensure the tinyG is not in an error/sleep state. Since this is the start of the procedure, reinitialize everything via switching power off and then on. 
-	8.	Run tinyG_startup.py, it should connect to COM port 4
+	8.	Run 
+```
+python tinyG_startup.py
+```
+	it should connect to COM port 4
 	9.	In the case that it was not reinitialized, tinyG.wakeUp() will wake it up, or a jog command input twice will wake it up, then jog in the desired step/rate.
 	10.	Jog the end mill up (and away in xy directions if needed) to situate the mouse in the stereotax: tinyG.jog(“z”,1,200) input multiple times can accomplish this.
 	11.	Remove the skin, fat, and fascia covering the dorsal skull.
@@ -97,5 +101,5 @@ Cd C:\downloads\craniobot\python code
 2. Expected output
 3. Expected run time
 
-# Instructions for use
+## Instructions for use
 1. How to run software on your data
