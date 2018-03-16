@@ -74,7 +74,7 @@ See https://www.arduino.cc/en/Guide/ArduinoDue to familiarize youself with the a
 		#logo_coordinates = [[1.1,2.6,2.6,1.1,1.1],
 		#                    [2.5,2.5,-4,-4,2.5]]
 		```
-	The first vector are the X coordinates ([1.1,2.6,2.6,1.1,1.1]) and the second vector are the Y coordinates for each corresponding X coordinate ([2.5,2.5,-4,-4,2.5]).  To use this path, remove the “#” . Note: only one logo_coordinate should be defined at a time (i.e. the result should have the “#” in front of them). Save this file and continue to the following steps.
+		The first vector are the X coordinates ([1.1,2.6,2.6,1.1,1.1]) and the second vector are the Y coordinates for each corresponding X coordinate ([2.5,2.5,-4,-4,2.5]).  To use this path, remove the “#” . Note: only one logo_coordinate should be defined at a time (i.e. the result should have the “#” in front of them). Save this file and continue to the following steps.
 
 	
 	2. To run all of the commands we will use the command line. Search for command prompt in the windows search bar, and right click run as administrator. 
