@@ -69,6 +69,14 @@ See https://www.arduino.cc/en/Guide/ArduinoDue to familiarize youself with the a
 
 	1. If you are doing a surgery, prepare the mouse as you would for a craniotomy. If you are doing a demo, prepare a dummy (we use a 50mL falcon tube laid on its side with a post it on the surface) and position it where you would expect to position the mouse skull on a stereotax. 
 	
+	2. First we will define the points to use for the craniotomy. All reference coordinates are relative to bregma and are specified in the file “pointGen.py” inside of the python code folder in units of mm in the variable logo_coordinates. To edit this file, right click the file and click edit with IDLE. Several example paths are commented out. For example this is a rectangle over the right hemisphere of the skull example.
+		```
+		#logo_coordinates = [[1.1,2.6,2.6,1.1,1.1],
+		#                    [2.5,2.5,-4,-4,2.5]]
+		```
+	The first vector are the X coordinates ([1.1,2.6,2.6,1.1,1.1]) and the second vector are the Y coordinates for each corresponding X coordinate ([2.5,2.5,-4,-4,2.5]).  To use this path, remove the “#” . Note: only one logo_coordinate should be defined at a time (i.e. the result should have the “#” in front of them). Save this file and continue to the following steps.
+
+	
 	2. To run all of the commands we will use the command line. Search for command prompt in the windows search bar, and right click run as administrator. 
 	
 	3.	Locate the path to the craniobot folder called python code. I may look something like C:\downloads\craniobot\python code
