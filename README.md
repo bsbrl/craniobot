@@ -1,31 +1,5 @@
 # craniobot
 
-readme_craniotomy.txt
-G
-
-J
-J
-
-Type
-Text
-Size
-4 KB (4,188 bytes)
-Storage used
-4 KB (4,188 bytes)
-Location
-craniobot installs
-Owner
-me
-Modified
-5:46 PM by me
-Opened
-5:46 PM by me
-Created
-5:46 PM with Google Drive Web
-Add a description
-Viewers can download
-Readme for Craniobot 
-
 1. System requirements
 
 a. Software dependencies
