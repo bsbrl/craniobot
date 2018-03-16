@@ -27,7 +27,7 @@
 	4. Extract zipped folder
 	5. Open notepad or any text editor
 	6. Go to the folder "install", right open the file "install2.bat" using notepad. If you do not see the file, select "All filetypes" from the dropdown in the windows explorer search, it defaults to only look for .txt files.
-	7. Change the 'YOURPATHHERE' to the address of the folder that contains "intall.bat". For example if my folder with the file is C:/downloads/craniobot/install I would replace 'YOURPATHHERE' with 'C:/downloads/craniobot/install'.
+	7. Change the 'YOURPATHHERE' to the address of the folder that contains "install2.bat". For example if my folder with the file is C:/downloads/craniobot/install I would replace 'YOURPATHHERE' with 'C:/downloads/craniobot/install'.
 	8. Save the file.
 	9. Add python to your path variable in windows as described in this tutorial
 	https://www.pythoncentral.io/add-python-to-path-python-is-not-recognized-as-an-internal-or-external-command/
