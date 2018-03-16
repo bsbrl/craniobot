@@ -69,33 +69,82 @@ To run all of the commands we will use the command line. Prepare the mouse
 	2.	Locate the path to the craniobot folder called python code. I may look something like C:\downloads\craniobot\python code
 	3.	In the command prompt type
 		```
-		Cd C:\downloads\craniobot\python code
+		cd C:\downloads\craniobot\python code
 		```
 
 	7.	Ensure the tinyG is not in an error/sleep state. Since this is the start of the procedure, reinitialize everything via switching power off and then on. 
-	8.	Run 
+	8.	In the command prompt type 
 	
-```
-python tinyG_startup.py
-```
+		```
+		python tinyG_startup.py
+		```
 	it should connect to COM port 4
-	9.	In the case that it was not reinitialized, tinyG.wakeUp() will wake it up, or a jog command input twice will wake it up, then jog in the desired step/rate.
-	10.	Jog the end mill up (and away in xy directions if needed) to situate the mouse in the stereotax: tinyG.jog(“z”,1,200) input multiple times can accomplish this.
+	9.	In the case that it was not reinitialized, type
+		```
+		tinyG.wakeUp()
+		```
+	 to wake it up, or a jog command input twice will wake it up, then jog in the desired step/rate.
+	10.	Jog the end mill up (and away in xy directions if needed) to situate the mouse in the stereotax:
+		```
+		tinyG.jog(“z”,1,200) 
+		```
+		input multiple times can accomplish this.
 	11.	Remove the skin, fat, and fascia covering the dorsal skull.
-	12.	Move the probe away from the mouse using jog commands, usually 15mm right and 15mm down tinyG.jog(“x”,15,200), then tinyG.jog(“y”,-15,200) and put the probe onto the mouse.
+	12.	Move the probe away from the mouse using jog commands, usually 15mm right and 15mm down 
+		```
+		tinyG.jog(“x”,15,200)
+		then tinyG.jog(“y”,-15,200)
+		```
+		and put the probe onto the mouse.
 	13.	Move the probe above bregma using jog commands.
-	14.	tinyG.runSingleProbe(), probe moves down to bregma and stops when contact sensor switch opens
-	15.	tinyG.setOrigin()
-	16.	for non-cicular craniotomies, make sure logo_coordinates contains two vectors for x and y coordinates in mm. Use BrainWindow(step_size) to generate pilot points. Ex: bw = BrainWindow(0.3) would be logo_coordinates with the minimum step size between points being 0.3 mm; extra points would be added to ensure this.
-	17.	tinyG.currentPosition() to check if origin registered correctly, and at origin
-	18.	tinyG.runProbe(bw.gCode) to begin probing at each point. 
-	19.	Store tinyG.probe_output data into external container, ex: bw_out = tinyG.probe_output
+		```
+		tinyG.runSingleProbe()
+		```
+		The probe moves down to bregma and stops when contact sensor switch opens
+	15.	
+		```
+		tinyG.setOrigin()
+		```
+	16.	for non-cicular craniotomies, make sure logo_coordinates contains two vectors for x and y coordinates in mm. Use BrainWindow(step_size) to generate pilot points. Ex:
+		```
+		bw = BrainWindow(0.3) 
+		```
+		would be logo_coordinates with the minimum step size between points being 0.3 mm; extra points would be added to ensure this.
+	17.	Run
+		```
+		tinyG.currentPosition() 
+		```
+		to check if origin registered correctly, and at origin
+	18.	Run
+		```
+		tinyG.runProbe(bw.gCode) 
+		``` 
+		to begin probing at each point. 
+	19.	Store tinyG.probe_output data into external container, ex: 
+		```
+		bw_out = tinyG.probe_output
+		``` 
 	20.	Move probe away from skull, switch end mill to cutting tool, move the tool back to bregma (very precisely), all using jog commands
-	21.	tinyG.setOrigin()
-	22.	Generate mill path: path = MillPath(tinyG.probe_output, depth). If you are doing a skull thinning procedure, comment out lines that return the milling path to the initial point before generating the mill path in generate_milling_commands (lines 49 to 58). Usually I name my milling path by putting the depth into the variable, e.g. w50 = MillPath(bw_out, 0.050) would be for milling 50 um deep. Generate as many milling paths as you anticipate needing (you can generate them in later/earlier steps).
+	21.	Run
+		```
+		tinyG.setOrigin()
+		``` 
+	22.	Generate mill path:
+		```
+		path = MillPath(tinyG.probe_output, depth)
+		```
+		If you are doing a skull thinning procedure, comment out lines that return the milling path to the initial point before generating the mill path in generate_milling_commands (lines 49 to 58). Usually I name my milling path by putting the depth into the variable, e.g. w50 = MillPath(bw_out, 0.050) would be for milling 50 um deep. Generate as many milling paths as you anticipate needing (you can generate them in later/earlier steps).
 	23.	Examine the mill path to make sure there aren’t false positives.
-	24.	tinyG.currentPotision()
-	25.	tinyG.runMill(path.gCode), or going along with previous examples, tinyG.runMill(w50.gCode)
+	24.	Run
+		```
+		path = tinyG.currentPotision()
+		```
+	
+	25.	Run
+		```
+		tinyG.runMill(path.gCode)
+		```
+		or going along with previous examples, tinyG.runMill(w50.gCode)
 	26.	repeat for as many iterations/paths as needed.
 	27.	Finished with craniobot part of surgery
 
