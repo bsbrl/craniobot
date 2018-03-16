@@ -1,8 +1,8 @@
 # craniobot
 
-1. System requirements
+# System requirements
 
-a. Software dependencies
+1. Software dependencies
 - Windows 10
 - 64 bit
 - Internet connection
