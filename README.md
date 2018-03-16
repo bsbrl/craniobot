@@ -17,16 +17,18 @@
 ## Installation
 
 1. Download software (~10-15 minutes)
-	1. Download zip folder from ".zip" or download repository from https://github.com/bsbrl/craniobot
-	2. Extract zipped folder
-	3. Open notepad or any text editor
-	4. Go to the folder "install", right open the file "install.bat" using notepad. If you do not see the file, select "All filetypes" from the dropdown in the windows explorer search, it defaults to only look for .txt files.
-	5. Change the 'YOURPATHHERE' to the address of the folder that contains "intall.bat". For example if my folder with the file is C:/downloads/craniobot/install I would replace 'YOURPATHHERE' with 'C:/downloads/craniobot/install'.
-	6. Save the file.
-	7. Repeat steps 4-6 for the file titled "install2.bat"
-	8. Right click the file "intall.bat" and click run as administrator. This will run the installation commands to install the following:
-	- python 2.7.14
-	- arduino-1.8.1-windows
+	1. Download python 2.7.14 for windows
+		- Click windows x86-64 MSI installer located at https://www.python.org/downloads/release/python-2714/
+		- Run the downloaded file
+	2. Download arduino 1.8.1 windows
+		- https://www.arduino.cc/en/Main/Donate click "just download" or donate if you wish to support arduino
+		- Run the downloaded file
+	3. Download zip folder of craniobot software from ".zip" or download repository from https://github.com/bsbrl/craniobot
+	4. Extract zipped folder
+	5. Open notepad or any text editor
+	6. Go to the folder "install", right open the file "install2.bat" using notepad. If you do not see the file, select "All filetypes" from the dropdown in the windows explorer search, it defaults to only look for .txt files.
+	7. Change the 'YOURPATHHERE' to the address of the folder that contains "intall.bat". For example if my folder with the file is C:/downloads/craniobot/install I would replace 'YOURPATHHERE' with 'C:/downloads/craniobot/install'.
+	8. Save the file.
 	9. Add python to your path variable in windows as described in this tutorial
 	https://www.pythoncentral.io/add-python-to-path-python-is-not-recognized-as-an-internal-or-external-command/
 	10. Right click the file "install2.bat" and click run as administrator. This will download the following python packages.
