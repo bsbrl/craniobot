@@ -68,9 +68,10 @@ To run all of the commands we will use the command line. Prepare the mouse
 	1.	To run all of the commands we will use the command line. Search for command prompt in the windows search bar, and right click run as administrator. 
 	2.	Locate the path to the craniobot folder called python code. I may look something like C:\downloads\craniobot\python code
 	3.	In the command prompt type
-'''
+```
 Cd C:\downloads\craniobot\python code
-'''
+```
+
 	7.	Ensure the tinyG is not in an error/sleep state. Since this is the start of the procedure, reinitialize everything via switching power off and then on. 
 	8.	Run tinyG_startup.py, it should connect to COM port 4
 	9.	In the case that it was not reinitialized, tinyG.wakeUp() will wake it up, or a jog command input twice will wake it up, then jog in the desired step/rate.
