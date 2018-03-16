@@ -165,5 +165,5 @@ See https://www.arduino.cc/en/Guide/ArduinoDue to familiarize youself with the a
 	25.	Finished with craniobot part of surgery. You can now remove the skull. 
 
 2. Expected output
-	The expected outcome
+	- The expected outcome is a craniotomy in the shape specified in the milling path coordinates. 
 3. Expected run time is ~20 - 40 minutes dependings on size of craniotomy.
