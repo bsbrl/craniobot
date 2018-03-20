@@ -1,4 +1,5 @@
 # Craniobot
+This code was developed by Gregory Johnson, Matthew Rynes, and Jay Jia Hu. 
 
 ## System requirements
 
